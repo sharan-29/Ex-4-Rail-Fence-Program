@@ -19,7 +19,54 @@ STEP-4: Arrange the characters of the keyword in sorted order and the correspond
 STEP-5: Read the characters row wise or column wise in the former order to get the cipher text.
 
 # PROGRAM
+```python
+#include <stdio.h>
+#include <string.h>
 
+void railFenceEncrypt(char text[], int key) 
+{
+    int len = strlen(text);
+    char rail[key][len];
+    
+    for(int i=0;i<key;i++)
+        for(int j=0;j<len;j++)
+            rail[i][j] = '\n';
+    
+    int row = 0, dir = 0;
+    for(int i=0;i<len;i++) {
+        rail[row][i] = text[i];
+        if(row==0) dir = 1;
+        else if(row==key-1) dir = 0;
+        row += dir ? 1 : -1;
+    }
+    
+    printf("Cipher Text: ");
+    for(int i=0;i<key;i++)
+        for(int j=0;j<len;j++)
+            if(rail[i][j] != '\n')
+                printf("%c", rail[i][j]);
+}
+
+int main() 
+{
+    char text[100];
+    int key;
+    
+    printf("Enter plain text: ");
+    scanf("%s", text);
+    printf("Enter key (number of rails): ");
+    scanf("%d", &key);
+    
+    railFenceEncrypt(text, key);
+    
+    return 0;
+}
+```
 # OUTPUT
 
+<img width="1637" height="906" alt="image" src="https://github.com/user-attachments/assets/e50de88d-b023-457e-aad8-13b710490381" />
+
+
 # RESULT
+
+Thus The Program Has Been Successfully Initiated
