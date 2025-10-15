@@ -64,7 +64,7 @@ int main()
 ```
 # OUTPUT
 
-<img width="1637" height="906" alt="image" src="https://github.com/user-attachments/assets/e50de88d-b023-457e-aad8-13b710490381" />
+<img width="1632" height="894" alt="image" src="https://github.com/user-attachments/assets/6ff975bb-f284-490c-8059-bf96eb040ace" />
 
 
 # RESULT
